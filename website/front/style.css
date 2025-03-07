@@ -1,0 +1,123 @@
+    * {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+    }
+
+    /* Background Animation */
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .animated-background {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(45deg, #c9eefe, #a0d8ef, #89c2d9, #5fa8d3);
+        background-size: 300% 300%;
+        animation: gradientAnimation 8s ease infinite;
+        align-items: center;
+    }
+
+    header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    main {
+        height: 80%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    input {
+        height: 1.5rem;
+        margin-top: 0.8rem;
+        padding: 5px;
+        border: 1px solid #5fa8d3;
+        border-radius: 5px;
+    }
+    button{
+        margin-top: 0.8rem;
+        width: 100px;
+        padding: 3px;
+        border: #5fa8d3;
+        border-radius: 20px;
+        background-color: #a0d8ef;
+    }
+
+    /* Lung Bronchi Animation */
+    @keyframes breathing {
+        0% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.05); opacity: 1; }
+        100% { transform: scale(1); opacity: 0.9; }
+    }
+
+    .lung-container {
+        position: absolute;
+        top: -80px;
+        right: -60px;
+        width: 100px;
+        height: 120px;
+        transform: rotate(45deg);
+        animation: breathing 6s ease-in-out infinite;
+    }
+
+    .lung {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        rotate: 45deg;
+    }
+
+    .bronchi {
+        stroke: #444;
+        stroke-width: 3;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    .checkbox-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    label{
+        margin: 10px;
+        border: 2px rgb(21, 24, 219) solid;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-radius: 10px;
+        justify-content: center;
+    }
+    input{
+        margin: 0;
+        margin-left: 10px;
+    }
